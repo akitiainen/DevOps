@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: ${{ github.workspace }}/src
+          path: akitiainen/DevOps
 
   test:
     needs: build
