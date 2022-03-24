@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: akitiainen/DevOps
+          path: ${{github.workspace}}/**
 
   test:
     needs: build
@@ -39,7 +39,7 @@ jobs:
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
-        path: public
+        path: ${{github.workspace}}/**
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
