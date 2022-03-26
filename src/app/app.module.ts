@@ -6,6 +6,7 @@ import { FormComponent } from './form/form.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
+import {RouterTestingModule} from "@angular/router/testing";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
       {path: 'login', component: LoginComponent},
       {path: '**', redirectTo: 'login', pathMatch: 'full'}
       ]
-    )
+    ),
+    RouterTestingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
