@@ -50,3 +50,4 @@ jobs:
         npm test -- --watch=false --browsers=ChromeHeadless
       env:
         CI: true
+
