@@ -65,10 +65,10 @@ jobs:
         name: webpack artifacts
         path: public
     - name: Build container image
-      uses: docker/build-push-action@v1
+      uses: akhileshns/heroku-deploy@v3.10.9
       with:
-        username: ${{github.actor}}
-        password: ${{secrets.GITHUB_TOKEN}}
-        registry: docker.pkg.github.com
-        repository: akitiainen/dev-ops
-        tag_with_sha: true
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "devops-form-example"
+        heroku_email: "aki.tiainen@hotmail.fi"
+        remote_branch: master
+        usedocker: true
