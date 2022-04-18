@@ -70,5 +70,5 @@ jobs:
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
-        repository: akitiainen/DevOps
+        repository: akitiainen/dev-ops
         tag_with_sha: true
