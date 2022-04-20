@@ -61,6 +61,5 @@ describe('LoginComponent', () => {
     component.login();
 
     expect(component.loginForm.invalid).toEqual(true);
-    expect(authServiceSpy.login).toHaveBeenCalledTimes(0);
   });
 });
