@@ -58,14 +58,14 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
     - name: Download built artifact
       uses: actions/download-artifact@main
       with:
         name: webpack artifacts
         path: public
     - name: Build container image
-      uses: akhileshns/heroku-deploy@latest
+      uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "devops-form-example"
