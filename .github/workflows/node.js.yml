@@ -39,7 +39,7 @@ jobs:
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
-        path: ${{github.workspace}}/dist/dev-ops
+        path: ${{github.workspace}}/src/app
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -71,4 +71,4 @@ jobs:
         heroku_app_name: "devops-form-example"
         heroku_email: "aki.tiainen@hotmail.fi"
         remote_branch: master
-        stack: "container"
+        usedocker: true
