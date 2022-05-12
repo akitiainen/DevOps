@@ -39,7 +39,7 @@ jobs:
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
-        path: ${{github.workspace}}/src/app
+        path: ${{github.workspace}}/dist/dev-ops
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -57,8 +57,6 @@ jobs:
     name: Docker Build, Tag, Push
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
     - name: Download built artifact
       uses: actions/download-artifact@main
       with:
