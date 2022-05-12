@@ -71,5 +71,4 @@ jobs:
         heroku_app_name: "devops-form-example"
         heroku_email: "aki.tiainen@hotmail.fi"
         remote_branch: master
-        branch: akitiainen-patch-1
         usedocker: true
