@@ -39,7 +39,7 @@ jobs:
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
-        path: ${{github.workspace}}/dist
+        path: public
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -72,4 +72,3 @@ jobs:
         heroku_email: "aki.tiainen@hotmail.fi"
         remote_branch: master
         usedocker: true
-        appdir: "dist"
