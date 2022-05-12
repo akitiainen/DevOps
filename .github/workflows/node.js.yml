@@ -57,16 +57,18 @@ jobs:
     name: Docker Build, Tag, Push
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Download built artifact
       uses: actions/download-artifact@main
       with:
         name: webpack artifacts
         path: public
     - name: Build container image
-      uses: akhileshns/heroku-deploy@v3.10.9
+      uses: akhileshns/heroku-deploy@latest
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "devops-form-example"
         heroku_email: "aki.tiainen@hotmail.fi"
-        remote_branch: master
-        usedocker: true
+        remote_branch: main
+        stack: "container"
