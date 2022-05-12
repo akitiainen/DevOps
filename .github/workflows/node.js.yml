@@ -70,5 +70,5 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "devops-form-example"
         heroku_email: "aki.tiainen@hotmail.fi"
-        remote_branch: main
+        remote_branch: master
         stack: "container"
