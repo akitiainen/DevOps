@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: ${{github.workspace}}/dist/
+          path: dist
 
 
   Build-and-Push-Docker-Image:
@@ -37,7 +37,7 @@ jobs:
     - name: Download build
       uses: actions/download-artifact@v1
       with:
-        name: deploy_dist
+        name: webpack artifacts
     - name: Build container image
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
