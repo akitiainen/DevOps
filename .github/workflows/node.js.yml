@@ -34,6 +34,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Download build
+      uses: actions/download-artifact@v1
+      with:
+        name: deploy_dist
     - name: Build container image
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
