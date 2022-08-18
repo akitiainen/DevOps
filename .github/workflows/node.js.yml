@@ -40,7 +40,7 @@ jobs:
         name: webpack artifacts
     - name: Build container image
       uses: akhileshns/heroku-deploy@v3.12.12
-      with:
+      with: 
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "devops-form-example"
         heroku_email: "aki.tiainen@hotmail.fi"
