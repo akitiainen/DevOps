@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: dist
+          path: dist/dev-ops
 
 
   Build-and-Push-Docker-Image:
