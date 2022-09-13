@@ -38,6 +38,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: webpack artifacts
+        path: dist/dev-ops
     - name: Build container image
       uses: akhileshns/heroku-deploy@v3.12.12
       with: 
