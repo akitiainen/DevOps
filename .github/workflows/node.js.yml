@@ -50,10 +50,10 @@ jobs:
         CI: true
 
 
-  Build-and-Push-Docker-Image:
+  Push-Docker-Image:
     runs-on: ubuntu-latest
     needs: test
-    name: Docker Build, Tag, Push
+    name: Push Docker to Heroku
 
     steps:
     - name: Checkout
