@@ -45,7 +45,7 @@ jobs:
     - name: npm install, and test
       run: |
         npm install
-        npm test
+        npm test -- --watch=false --browsers=ChromeHeadless
       env:
         CI: true
 
