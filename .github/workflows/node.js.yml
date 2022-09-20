@@ -23,7 +23,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: webpack artifacts
-          path: public/
+          path: dist/dev-ops
           
   test:
     needs: build
@@ -37,7 +37,7 @@ jobs:
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
-        path: public
+        path: dist/dev-ops
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -62,7 +62,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: webpack artifacts
-        path: public
+        path: dist/dev-ops
     - name: Build container image
       uses: akhileshns/heroku-deploy@v3.12.12
       with: 
